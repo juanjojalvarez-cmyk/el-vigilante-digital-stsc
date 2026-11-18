@@ -1,0 +1,22 @@
+EL VIGILANTE DIGITAL – STS-C | PAQUETE PWA 3.1
+
+CONTENIDO
+- index.html: aplicación.
+- manifest.webmanifest: configuración instalable.
+- sw.js: caché de recursos básicos para uso sin conexión tras la primera carga.
+- icons/: iconos de instalación de 192 y 512 píxeles.
+
+PUBLICACIÓN
+1. Sube TODO el contenido de esta carpeta, conservando la estructura, a un alojamiento web estático que proporcione HTTPS.
+2. La página principal debe quedar en la raíz como index.html.
+3. Comprueba que la dirección HTTPS abre la aplicación y que /manifest.webmanifest, /sw.js y /icons/icon-192.png se pueden abrir.
+4. En Android, abre la dirección con Chrome y elige “Instalar aplicación” o “Añadir a pantalla de inicio”.
+5. Comprueba la navegación, registros, exportación, compartir, impresión y modo sin conexión.
+
+IMPORTANTE: este paquete NO está publicado. No se ha creado una cuenta de alojamiento ni se ha desplegado en internet. La publicación requiere acceso a una cuenta del proveedor. GitHub Pages admite sitios estáticos y HTTPS; sus repositorios públicos exponen los archivos del sitio, por lo que no se deben subir datos personales ni secretos. Documentación: https://docs.github.com/en/pages/getting-started-with-github-pages/securing-your-github-pages-site-with-https
+
+PRIVACIDAD Y DATOS
+La aplicación utiliza localStorage del navegador/dispositivo. No hay cuentas, servidor, sincronización, cifrado de extremo a extremo ni copia de seguridad remota. Los datos pueden perderse al borrar los datos del navegador o cambiar de dispositivo. No introducir datos médicos, identificaciones, contraseñas ni información confidencial de terceros.
+
+ALCANCE JURÍDICO
+La guía se refiere al Convenio colectivo estatal de empresas de seguridad 2026-2030 (BOE-A-2026-8569) y solo es aplicable a relaciones incluidas en su ámbito funcional y personal. No cubre automáticamente actividades auxiliares ni sustituye acuerdos de empresa/servicio, resoluciones judiciales o asesoramiento jurídico.

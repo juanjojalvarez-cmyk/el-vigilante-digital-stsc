@@ -1,0 +1,687 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102b50">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <meta name="description" content="Herramientas gratuitas para profesionales de la seguridad privada.">
+  <title>El Vigilante Digital · STS-C</title>
+  <style>
+*{box-sizing:border-box} :root{font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:#172334;background:#f3f6fa}body{margin:0}.top{background:#102b50;color:white;display:flex;align-items:center;gap:12px;padding:14px 16px;position:sticky;top:0;z-index:5;box-shadow:0 3px 12px #102b5025}.brand-mark{width:42px;height:42px;border:2px solid #fff;border-radius:12px;display:grid;place-items:center;font-weight:900;font-size:12px}.top strong{display:block;letter-spacing:.04em;font-size:14px}.top small{display:block;color:#c6d7eb;font-size:11px;margin-top:3px}.install{margin-left:auto;border:1px solid #d9e7f7;background:#fff;color:#102b50;border-radius:20px;padding:8px 12px;font-weight:700}main{max-width:760px;margin:auto;padding:18px 15px 40px}.view{display:none}.view.active{display:block}.hero{background:linear-gradient(135deg,#102b50,#1d4c7d);color:white;border-radius:22px;padding:25px 22px;margin-bottom:23px}.hero h1{font-size:34px;line-height:1.05;margin:8px 0 12px}.hero p{color:#e0eaf5;line-height:1.5}.eyebrow{font-size:10px;letter-spacing:.14em;font-weight:800;color:#a9c8e9!important}.free{display:inline-block;margin-top:8px;border:1px solid #aac7e6;border-radius:20px;padding:7px 10px;font-size:10px;font-weight:800;letter-spacing:.08em}.section-head{display:flex;align-items:center;justify-content:space-between;margin:18px 2px 12px}.section-head h2{font-size:18px;margin:0}.section-head span,.muted{color:#6c7b8c;font-size:13px}.tiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.tile{background:white;border:1px solid #e0e7ef;border-radius:16px;padding:16px;text-align:left;min-height:140px;color:#172334;display:flex;flex-direction:column;align-items:flex-start;gap:8px;box-shadow:0 3px 12px #102b5008}.tile-icon{width:36px;height:36px;border-radius:11px;background:#eaf2fb;color:#1d5b91;display:grid;place-items:center;font-size:23px}.tile strong{font-size:14px}.tile small{font-size:12px;line-height:1.4;color:#6c7b8c}.notice,.panel{background:white;border:1px solid #e1e8f0;border-radius:16px;padding:17px;margin:14px 0;box-shadow:0 3px 12px #102b5008}.notice{border-left:4px solid #4b80b5;font-size:13px}.notice p{color:#607084;line-height:1.5;margin-bottom:0}.back,.text-button{border:0;background:none;color:#1e5c91;font-weight:700;padding:8px 0}.back{margin-bottom:8px}h1{font-size:27px;margin:6px 0 8px}h2{font-size:17px;margin:0 0 13px}label{display:block;font-size:13px;font-weight:650;margin:12px 0;color:#33465a}input,select,textarea{display:block;width:100%;margin-top:6px;border:1px solid #d5dee8;border-radius:10px;padding:11px 12px;font:inherit;font-size:15px;background:#fff;color:#172334}textarea{resize:vertical}.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}.primary,.secondary{width:100%;border:0;border-radius:11px;padding:13px 16px;font-weight:750;font-size:14px;margin-top:8px}.primary{background:#12365e;color:white}.secondary{background:#eaf1f8;color:#173f68}.metric{display:flex;align-items:baseline;gap:10px;margin:12px 0}.metric strong{font-size:30px;color:#12365e}.metric span{font-size:12px;color:#6c7b8c}.bar{height:9px;background:#e8eef5;border-radius:9px;overflow:hidden}.bar i{display:block;height:100%;width:0;background:#3478b6;border-radius:9px}.records{display:grid;gap:9px}.record{background:white;border:1px solid #e1e8f0;border-radius:12px;padding:13px;font-size:13px}.record strong{display:block;margin-bottom:4px}.record small{color:#6c7b8c}.result{font-weight:700;color:#174d7c}.output pre{white-space:pre-wrap;overflow-wrap:anywhere;font:13px/1.5 system-ui;color:#34465a}.compact{padding:20px}.compact h2{font-size:22px;line-height:1.2}footer{border-top:1px solid #dce4ed;padding:18px;text-align:center;color:#6c7b8c;font-size:10px;letter-spacing:.05em}footer strong{display:block;color:#173f68;font-size:14px;margin-bottom:4px}@media(min-width:600px){.tiles{grid-template-columns:repeat(3,minmax(0,1fr))}.hero h1{font-size:42px}}
+  .report-actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:12px}.report-actions button{margin:0}.report-form h2{margin-top:20px;padding-bottom:7px;border-bottom:1px solid #e2e8ef}.report-form input[type=checkbox],.report-form input[type=radio]{display:inline-block;width:auto;margin:0 6px 0 0}.report-form label:has(input[type=checkbox]),.report-form label:has(input[type=radio]){display:flex;align-items:center;font-weight:500;gap:4px}.report-form .two label:has(input[type=checkbox]),.report-form .two label:has(input[type=radio]){margin:6px 0}.report-form .two{align-items:end}@media(max-width:520px){.report-actions{grid-template-columns:1fr}.two{grid-template-columns:1fr}}@page{size:A4;margin:18mm 17mm 20mm}
+@media print{
+  body.printing-report{background:#fff!important;color:#172334!important}
+  body.printing-report .top,body.printing-report main>.view:not(.active),body.printing-report .back,body.printing-report .report-form,body.printing-report .notice,body.printing-report footer,body.printing-report .report-actions,body.printing-report .output>p{display:none!important}
+  body.printing-report main{max-width:none;padding:0!important;margin:0!important}
+  body.printing-report #incidentOutput,body.printing-report #accidentOutput{display:block!important;border:0!important;box-shadow:none!important;border-radius:0!important;margin:0!important;padding:0!important}
+  body.printing-report #incidentOutput h2,body.printing-report #accidentOutput h2{display:none!important}
+  body.printing-report #incidentOutput:before,body.printing-report #accidentOutput:before{content:"EL VIGILANTE DIGITAL  |  STS-C\A INFORME DE ACTUACIÓN PROFESIONAL";white-space:pre;display:block;text-align:center;font:700 15pt/1.5 Arial,sans-serif;color:#102b50;border-bottom:3px solid #102b50;padding:0 0 10px;margin:0 0 18px}
+  body.printing-report #incidentOutput pre,body.printing-report #accidentOutput pre{white-space:pre-wrap;overflow-wrap:anywhere;font:10.5pt/1.65 Arial,sans-serif;color:#172334;margin:0;padding:0;white-space:pre-wrap}
+  body.printing-report #incidentOutput:after,body.printing-report #accidentOutput:after{content:"\A\A Firma del redactor: __________________________________________\A\A Fecha: _______________________";white-space:pre;display:block;margin-top:28px;padding-top:12px;border-top:1px solid #9aa8b7;font:10pt/1.8 Arial,sans-serif;color:#172334}
+}
+  
+/* Calendario mensual v0.5 */
+.calendar-toolbar{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:14px 0}
+.calendar-toolbar button{border:1px solid #d5dee8;background:#fff;color:#173f68;border-radius:10px;padding:9px 12px;font-weight:750}
+.calendar-month{font-weight:800;color:#173f68;text-align:center;text-transform:capitalize}
+.calendar-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:5px}
+.calendar-weekday{text-align:center;font-size:11px;font-weight:800;color:#718096;padding:7px 0}
+.calendar-day{min-height:69px;border:1px solid #e0e7ef;border-radius:10px;background:#fff;padding:6px 3px;text-align:center;color:#172334;display:flex;flex-direction:column;align-items:center;gap:4px}
+.calendar-day.empty{background:transparent;border:0}
+.calendar-day.today{border:2px solid #3478b6}
+.calendar-day.selected{background:#eaf2fb;border-color:#3478b6}
+.calendar-day .num{font-size:13px;font-weight:800}
+.calendar-day .tag{font-size:9px;line-height:1.15;color:#1d5b91;max-width:100%;overflow:hidden}
+.calendar-day.worked{background:#f0f6fc}
+.calendar-day.off .tag{color:#28734a}
+.calendar-day.leave .tag{color:#8a5a12}
+.calendar-legend{display:flex;flex-wrap:wrap;gap:10px;font-size:11px;color:#6c7b8c;margin:10px 0}
+.calendar-legend span{display:flex;align-items:center;gap:4px}
+.dot{width:8px;height:8px;border-radius:50%;display:inline-block;background:#3478b6}
+.dot.green{background:#32945e}.dot.orange{background:#d28b2e}
+.roster-summary{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:12px 0}
+.roster-summary>div{background:#f2f6fa;border-radius:12px;padding:11px;text-align:center}
+.roster-summary strong{display:block;color:#173f68;font-size:18px}
+.roster-summary small{font-size:10px;color:#6c7b8c}
+.day-editor[hidden]{display:none}
+.day-editor{border:1px solid #cbd9e8;background:#f8fbfe}
+.editor-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.editor-actions button{margin-top:8px}
+@media(max-width:390px){.calendar-day{min-height:59px}.calendar-day .tag{font-size:8px}.calendar-grid{gap:3px}.roster-summary strong{font-size:16px}}
+@media print{body.printing-roster .top,body.printing-roster main>.view:not(.active),body.printing-roster .back,body.printing-roster .calendar-toolbar button,body.printing-roster #dayEditor,body.printing-roster .notice,body.printing-roster footer,body.printing-roster .roster-actions{display:none!important}body.printing-roster #cuadrante{display:block!important}body.printing-roster main{padding:0}body.printing-roster .panel{box-shadow:none}}
+
+  
+.target-setting{margin:12px 0 4px;padding:12px;border:1px solid #dce5ee;border-radius:12px;background:#fbfdff}
+.target-setting label{display:block;font-weight:750;font-size:13px;margin-bottom:7px;color:#23496c}
+.target-row{display:flex;gap:8px;align-items:center}
+.target-row input{min-width:0;flex:1;border:1px solid #ccd8e4;border-radius:9px;padding:10px;font:inherit;background:white}
+.target-row button{white-space:nowrap}
+.target-setting small{display:block;margin-top:7px}
+@media(max-width:370px){.target-row{flex-direction:column;align-items:stretch}}
+
+  
+/* Ajuste móvil del campo de objetivo: evitar que el botón lo aplaste */
+.target-row{display:flex;flex-wrap:nowrap;gap:8px;align-items:stretch}
+.target-row input{display:block;width:100%;min-width:0;flex:1 1 0;box-sizing:border-box;font-size:16px}
+.target-row button{display:block;width:auto;max-width:55%;flex:0 0 auto;white-space:normal;padding-left:12px;padding-right:12px}
+
+  
+/* Colores suaves para distinguir turnos */
+.calendar-day.shift-morning{background:#fff4d9;border-color:#f0d28b}
+.calendar-day.shift-afternoon{background:#e8f3ff;border-color:#b7d4f2}
+.calendar-day.shift-night{background:#ecebff;border-color:#c7c4f1}
+.calendar-day.shift-work{background:#e8f5ee;border-color:#b9dec8}
+.calendar-day.off{background:#e8f7ee;border-color:#b8dfc5}
+.calendar-day.leave{background:#fff0e2;border-color:#f1c99d}
+.dot.morning{background:#d79a25}.dot.afternoon{background:#3985c8}.dot.night{background:#7770c8}
+.hours-remaining{padding:10px 12px;margin:-2px 0 12px;background:#f2f6fa;border-radius:10px;color:#23496c;font-size:13px;font-weight:750;text-align:center}
+
+  
+.day-editor form>p{margin:12px 0 6px}
+.day-editor form>p strong{color:#23496c;font-size:13px}
+
+  
+.extension-summary{margin-top:12px}
+.small{font-size:12px}
+.extension-record{display:flex;flex-direction:column;gap:5px}
+.extension-record .extra{font-weight:800;color:#1e6b48}
+
+  
+.extension-history-head{display:flex;align-items:end;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:18px}
+.extension-history-head h2{margin:0}
+.extension-history-head label{min-width:155px;flex:1;max-width:220px}
+.extension-history-head input{margin-top:6px}
+
+  
+.report-actions{display:grid;grid-template-columns:1fr;gap:10px;margin:12px 0}
+@media(min-width:560px){.report-actions{grid-template-columns:1fr 1fr}}
+
+  </style>
+</head>
+<body>
+<header class="top">
+  <div class="brand-mark">STS-C</div>
+  <div><strong>EL VIGILANTE DIGITAL</strong><small>Herramientas para seguridad privada</small></div>
+  <button id="installBtn" class="install" hidden>Instalar</button>
+</header>
+<main>
+  <section id="home" class="view active">
+    <div class="hero">
+      <p class="eyebrow">UNA HERRAMIENTA PARA TODO EL COLECTIVO</p>
+      <h1>Tu trabajo,<br>mejor organizado.</h1>
+      <p>Utilidades gratuitas para registrar jornadas, organizar turnos y preparar informes.</p>
+      <span class="free">ACCESO LIBRE · GRATUITO</span>
+    </div>
+    <div class="section-head"><h2>Herramientas</h2><span>Versión 3.0</span></div>
+    <div class="tiles">
+      <button class="tile" data-open="jornada"><b class="tile-icon">◷</b><strong>Control de jornada</strong><small>Registra entradas, salidas y horas.</small></button>
+      <button class="tile" data-open="cuadrante"><b class="tile-icon">▦</b><strong>Mi cuadrante</strong><small>Organiza tus turnos y días libres.</small></button>
+      <button class="tile" data-open="descansos"><b class="tile-icon">◴</b><strong>Ampliaciones y descansos</strong><small>Deja constancia de cambios de turno.</small></button>
+      <button class="tile" data-open="incidencias"><b class="tile-icon">▤</b><strong>Informe de incidencias</strong><small>Prepara un borrador ordenado.</small></button>
+      <button class="tile" data-open="accidentes"><b class="tile-icon">＋</b><strong>Informe de accidentes</strong><small>Recoge los datos esenciales.</small></button>
+      <button class="tile" data-open="sindicato"><b class="tile-icon">⬡</b><strong>STS-C</strong><small>Información y contacto sindical.</small></button>
+      <button class="tile" data-open="derechos"><b class="tile-icon">§</b><strong>Derechos y normativa</strong><small>Guía inicial verificada del convenio de seguridad.</small></button>
+      <button class="tile" data-open="documentacion"><b class="tile-icon">▣</b><strong>Mi documentación</strong><small>Organiza referencias a tus documentos profesionales.</small></button>
+    </div>
+    <aside class="notice"><strong>Importante</strong><p>Para instalarla como aplicación debe estar publicada en una dirección HTTPS y acompañada de sus archivos PWA. Esta carpeta incluye esos archivos, pero todavía no está alojada en internet.</p><p>Esta aplicación es una herramienta de apoyo, no un sistema oficial de registro de jornada ni un canal formal de comunicación con la empresa. Los datos se guardan localmente en este navegador; no existe sincronización ni copia de seguridad automática. Exporta tus registros periódicamente y evita introducir datos personales o médicos innecesarios.</p></aside>
+  </section>
+
+  <section id="derechos" class="view">
+    <button class="back" data-home>← Inicio</button>
+    <h1>Derechos y normativa</h1>
+    <p class="muted">Guía para profesionales incluidos en el ámbito funcional del Convenio colectivo estatal de empresas de seguridad 2026-2030. No todas las actividades auxiliares están incluidas automáticamente: consulta los artículos 1 a 4 y el convenio aplicable a tu empresa.</p>
+    <div class="notice"><strong>Fuente oficial y alcance</strong><p>Contenido contrastado con el Convenio publicado en el BOE, referencia BOE-A-2026-8569, de 18 de abril de 2026. Vigencia: 1 de enero de 2026 a 31 de diciembre de 2030. Esta guía resume el texto; no sustituye la revisión del cuadrante, contrato, acuerdos de empresa o servicio ni el asesoramiento jurídico.</p><p><a href="https://www.boe.es/eli/es/res/2026/04/08/(5)" target="_blank" rel="noopener">Consultar el convenio íntegro en el BOE</a></p></div>
+    <article class="panel"><h2>1. Jornada ordinaria</h2><p><strong>Artículo 52.1.</strong> La jornada general es de <strong>1.782 horas anuales de trabajo efectivo</strong>, con cómputo mensual de referencia de <strong>162 horas</strong>.</p><p>Si por razones técnicas, organizativas o de producción del servicio no se puede completar la jornada mensual, el convenio prevé su compensación en el mismo o distinto servicio dentro de los dos meses siguientes. Hay reglas específicas y excepciones según el sistema de cuadrante y el tipo de servicio.</p><p class="muted">No debe confundirse la referencia mensual general con la distribución irregular de los servicios fijos y estables que tengan cuadrante anual.</p></article>
+    <article class="panel"><h2>2. Cuadrantes y órdenes mensuales</h2><p><strong>Artículo 52.2 y 52.6.</strong> En servicios fijos y estables —duración prevista igual o superior a un año— el convenio regula cuadrantes anuales, con entrega a la plantilla y a la representación legal con un mes de antelación. El cuadrante debe recoger servicios, descansos y vacaciones.</p><p>Para el personal operativo, las órdenes mensuales de trabajo deben entregarse con <strong>al menos 7 días naturales</strong> antes del inicio del mes al que se refieren, salvo que existan acuerdos, resoluciones o sentencias previas que deban respetarse.</p><p class="muted">El régimen de cuadrante anual no se aplica automáticamente a cualquier servicio: el artículo establece qué servicios quedan fuera y contempla particularidades.</p></article>
+    <article class="panel"><h2>3. Descanso entre jornadas</h2><p><strong>Artículo 52.1.</strong> Entre el final de una jornada y el comienzo de la siguiente deben mediar, como regla general, <strong>13 horas</strong>, según el artículo 52.1. El propio artículo establece excepciones por especial urgencia o necesidad perentoria y en el trabajo a turnos.</p><p>No debe confundirse esta regla sectorial con el descanso semanal. Las excepciones deben analizarse con los hechos concretos y la normativa aplicable; no basta con que la empresa invoque genéricamente una necesidad del servicio.</p></article>
+    <article class="panel"><h2>4. Fines de semana y fechas navideñas</h2><p><strong>Artículo 52.1 y 52.2.</strong> El convenio establece que se facilitará, como mínimo, la libranza de un fin de semana al mes (sábado y domingo), con excepciones expresas: adscripción voluntaria, contratación específica para esos días, rotación pactada distinta y determinadas necesidades imprevistas del cliente.</p><p>También regula la libranza de al menos una de las noches del 24 o del 31 de diciembre y la mañana del día siguiente que corresponda. El turno de tarde del día siguiente se añade bajo las condiciones y excepciones del artículo 52.1. El mismo artículo incorpora períodos adicionales de 48 horas coincidentes parcialmente con fin de semana desde 2027: uno en 2027, dos en 2028 y tres desde 2029, sujetos a sus excepciones.</p><p class="muted">No es un derecho sin excepciones: hay que comprobar el sistema de rotación, la adscripción y las circunstancias previstas en el convenio.</p></article>
+    <article class="panel"><h2>5. Horas extraordinarias</h2><p><strong>Artículo 53.</strong> En servicios con cuadrante anual, son extraordinarias las horas que excedan del reparto mensual asignado. En los demás servicios, las que superen las <strong>162 horas mensuales</strong>.</p><p>Se compensan mediante descanso o abono conforme al convenio y al artículo 35 del Estatuto de los Trabajadores. El convenio dispone que se abonen en la nómina del mes siguiente al de su realización; no permite diferir su pago hasta completar la jornada anual.</p><p>La realización es, como regla general, de libre aceptación. El artículo recoge una previsión específica para continuar un servicio de vigilancia o transporte de seguridad ya iniciado hasta su conclusión o llegada del relevo; el exceso no compensado en descanso se abona como extraordinario.</p></article>
+    <article class="panel"><h2>6. Vacaciones y descanso anual</h2><p><strong>Artículo 57.</strong> El convenio reconoce <strong>31 días naturales de vacaciones retribuidas</strong> al personal que lleve un año al servicio de la empresa.</p><p><strong>Artículo 55.</strong> Para las personas adscritas a servicios cuya jornada diaria sea igual o superior a ocho horas, establece un mínimo de <strong>96 días naturales de descanso anual</strong>, incluyendo los domingos y festivos del año que les correspondiera trabajar por turno y excluyendo las vacaciones.</p><p class="muted">La aplicación concreta depende de la jornada diaria y del régimen de servicio; no debe extrapolarse esta regla a todos los supuestos sin revisar el artículo completo.</p></article>
+    <article class="panel"><h2>7. Cambios de horario</h2><p><strong>Artículo 54.</strong> Cuando la empresa necesite modificar los horarios establecidos por necesidades del servicio, el convenio remite al procedimiento del artículo 41 del Estatuto de los Trabajadores, con la salvedad de los supuestos de cuadrante anual regulados en el artículo 52.</p><p class="muted">Un cambio puntual, una modificación sustancial y un ajuste de cuadrante no son necesariamente lo mismo. Hay que estudiar el caso concreto y el procedimiento utilizado.</p></article>
+    <div class="notice"><strong>Criterio de esta sección</strong><p>Solo se incorporarán derechos cuando se haya comprobado el artículo aplicable y sus excepciones. Se distinguirá entre lo que dice literalmente el convenio, la normativa general complementaria y la interpretación de tribunales. Si un punto no está suficientemente verificado, no se publicará como derecho confirmado.</p></div>
+    <p class="muted">Última revisión documental: 18 de noviembre de 2026.</p>
+  </section>
+
+  <section id="documentacion" class="view">
+    <button class="back" data-home>← Inicio</button><h1>Mi documentación</h1>
+    <p class="muted">Un índice personal para tener localizados tus documentos profesionales: informes, cuadrantes, registros y comunicaciones.</p>
+    <div class="notice"><strong>Privacidad y funcionamiento</strong><p>Esta herramienta guarda únicamente el título, la categoría, la fecha y una referencia o nombre de archivo. No almacena ni sube el documento adjunto. Los datos quedan en este navegador y dispositivo; no incluyas contraseñas, datos médicos ni información personal innecesaria.</p></div>
+    <form id="documentForm" class="panel">
+      <h2>Añadir referencia</h2>
+      <label>Nombre del documento<input name="title" maxlength="90" required placeholder="Ej. Cuadrante noviembre 2026"></label>
+      <div class="two">
+        <label>Categoría<select name="category" required><option value="Cuadrante">Cuadrante</option><option value="Jornada">Registro de jornada</option><option value="Incidencia">Informe de incidencias</option><option value="Accidente">Informe de accidente</option><option value="Ampliaciones">Ampliaciones y descansos</option><option value="Comunicaciones">Comunicaciones</option><option value="Formación">Formación</option><option value="Otros">Otros</option></select></label>
+        <label>Fecha<input name="date" type="date" required></label>
+      </div>
+      <label>Nombre del archivo o ubicación (opcional)<input name="fileRef" maxlength="120" placeholder="Ej. informe-18-noviembre.pdf"></label>
+      <label>Nota breve (opcional)<textarea name="notes" rows="2" maxlength="180" placeholder="Ej. Guardado en Descargas"></textarea></label>
+      <button class="primary" type="submit">Añadir a mi documentación</button>
+    </form>
+    <div class="section-head"><h2>Documentos registrados</h2><span id="documentCount">0 documentos</span></div>
+    <label>Filtrar por categoría<select id="documentFilter"><option value="">Todas las categorías</option><option>Cuadrante</option><option>Jornada</option><option>Incidencia</option><option>Accidente</option><option>Ampliaciones</option><option>Comunicaciones</option><option>Formación</option><option>Otros</option></select></label>
+    <div class="report-actions"><button type="button" class="secondary" id="exportDocuments">Descargar índice CSV</button><button type="button" class="secondary" id="clearDocuments">Borrar todo el índice</button></div>
+    <div id="documentList" class="records"></div>
+  </section>
+
+  <section id="jornada" class="view">
+    <button class="back" data-home>← Inicio</button><h1>Control de jornada</h1>
+    <p class="muted">Registra las horas que realmente has trabajado, aunque no coincidan con el cuadrante. Puedes anotar turnos partidos y pausas.</p>
+    <div class="panel">
+      <label>Objetivo mensual (horas)<input id="targetHours" type="number" min="1" value="162"></label>
+      <div class="metric"><strong id="monthTotal">0:00</strong><span>Horas registradas este mes</span></div>
+      <div class="bar"><i id="progress"></i></div><small id="progressText" class="muted">0% del objetivo</small>
+    </div>
+    <form id="shiftForm" class="panel">
+      <h2>Añadir turno</h2>
+      <label>Fecha<input name="date" type="date" required></label>
+      <p class="muted"><strong>Primer tramo</strong></p>
+      <div class="two"><label>Entrada<input name="start" type="time" required></label><label>Salida<input name="end" type="time" required></label></div>
+      <p class="muted"><strong>Segundo tramo (opcional)</strong></p>
+      <div class="two"><label>Segunda entrada<input name="start2" type="time"></label><label>Segunda salida<input name="end2" type="time"></label></div>
+      <label>Pausa no computable (minutos)<input name="break" type="number" min="0" step="5" value="0"></label>
+      <label>Observaciones<textarea name="notes" rows="2" placeholder="Opcional: servicio, cambio de turno..."></textarea></label>
+      <button class="primary">Guardar turno</button>
+    </form>
+    <div class="section-head"><h2>Historial</h2><label>Mes <input id="shiftMonth" type="month"></label></div>
+    <div class="report-actions">
+      <button type="button" class="secondary" id="shareShifts">Compartir informe</button>
+      <button type="button" class="secondary" id="downloadShifts">Descargar CSV</button>
+      <button type="button" class="secondary" id="deleteSelectedShifts">Borrar seleccionados</button>
+      <button type="button" class="text-button" id="clearShifts">Borrar todo el historial</button>
+    </div>
+    <p class="muted small">Puedes eliminar un turno concreto con su botón «Borrar» o marcar varios para eliminarlos juntos.</p>
+    <div id="shiftList" class="records"></div>
+  </section>
+
+  <section id="cuadrante" class="view">
+    <button class="back" data-home>← Inicio</button><h1>Mi cuadrante</h1>
+    <p class="muted">Tu calendario mensual. Pulsa cualquier día para añadir o modificar tu turno.</p>
+    <div class="panel">
+      <div class="calendar-toolbar">
+        <button type="button" id="prevMonth" aria-label="Mes anterior">←</button>
+        <div id="calendarMonth" class="calendar-month"></div>
+        <button type="button" id="nextMonth" aria-label="Mes siguiente">→</button>
+      </div>
+      <div class="roster-summary">
+        <div><strong id="rosterHours">0 h</strong><small>Horas del mes</small></div>
+        <div><strong id="rosterDays">0</strong><small>Días trabajados</small></div>
+        <div><strong id="rosterTarget">162 h</strong><small>Objetivo mensual</small></div>
+      </div>
+      <div class="hours-remaining" id="hoursRemaining">Te quedan 162 h para completar el objetivo</div>
+      <div class="target-setting">
+        <label for="monthlyTarget">Mi objetivo mensual de horas</label>
+        <div class="target-row"><input id="monthlyTarget" type="number" min="1" max="300" step="0.5" inputmode="decimal" value="162"><button type="button" class="secondary" id="saveTarget">Guardar objetivo</button></div>
+        <small class="muted">Puedes cambiarlo cuando lo necesites. Se aplicará a todos los meses.</small>
+      </div>
+      <div class="calendar-grid" id="calendarGrid"></div>
+      <div class="calendar-legend"><span><i class="dot morning"></i> Mañana</span><span><i class="dot afternoon"></i> Tarde</span><span><i class="dot night"></i> Noche</span><span><i class="dot"></i> Trabajo / partido</span><span><i class="dot green"></i> Libre</span><span><i class="dot orange"></i> Vacaciones / baja</span></div>
+      <div class="roster-actions report-actions">
+        <button type="button" class="secondary" id="exportRoster">Descargar CSV</button>
+        <button type="button" class="secondary" id="shareRoster">Compartir</button>
+        <button type="button" class="secondary" id="printRoster">Imprimir / PDF</button>
+      </div>
+    </div>
+    <div id="dayEditor" class="panel day-editor" hidden>
+      <h2 id="editorTitle">Editar día</h2>
+      <form id="rosterForm">
+        <input type="hidden" name="date">
+        <label>Tipo de día<select name="type"><option value="Trabajo">Trabajo</option><option value="Mañana">Mañana</option><option value="Tarde">Tarde</option><option value="Noche">Noche</option><option value="Partido">Partido</option><option value="Libre">Libre</option><option value="Vacaciones">Vacaciones</option><option value="Baja">Baja</option><option value="Permiso">Permiso</option><option value="Otro">Otro</option></select></label>
+        <p class="muted"><strong>Primer tramo</strong></p>
+        <div class="two"><label>Entrada<input name="start" type="time"></label><label>Salida<input name="end" type="time"></label></div>
+        <p class="muted"><strong>Segundo tramo (opcional)</strong></p>
+        <div class="two"><label>Segunda entrada<input name="start2" type="time"></label><label>Segunda salida<input name="end2" type="time"></label></div>
+        <label>Pausa no computable (minutos)<input name="break" type="number" min="0" step="5" value="0"></label>
+        <label>Observaciones<textarea name="notes" rows="2" placeholder="Servicio, cambio de turno, anotaciones..."></textarea></label>
+        <button class="primary" type="submit">Guardar día</button>
+        <div class="editor-actions"><button type="button" class="secondary" id="deleteDay">Borrar día</button><button type="button" class="secondary" id="closeEditor">Cerrar</button></div>
+      </form>
+    </div>
+    <aside class="notice"><strong>Guardado en tu móvil</strong><p>El cuadrante se guarda en este navegador. Si cambias de móvil o borras los datos del navegador, puedes perderlo. Descarga una copia periódicamente. Todavía no se sincroniza con otros dispositivos.</p></aside>
+  </section>
+
+  <section id="descansos" class="view">
+    <button class="back" data-home>← Inicio</button><h1>Ampliaciones y descansos</h1>
+    <p class="muted">Registra cuándo terminas más tarde de lo previsto y consulta el tiempo adicional acumulado. También puedes calcular el intervalo entre dos jornadas.</p>
+    <div class="roster-summary extension-summary">
+      <div><strong id="extensionTotal">0 h 00</strong><small>Tiempo ampliado</small></div>
+      <div><strong id="extensionCount">0</strong><small>Ampliaciones</small></div>
+      <div><strong id="extensionAverage">0 min</strong><small>Media por ampliación</small></div>
+    </div>
+    <form id="extensionForm" class="panel">
+      <h2>Registrar una ampliación</h2>
+      <label>Fecha del turno<input name="date" type="date" required></label>
+      <button type="button" class="secondary" id="loadPlannedExit">Cargar salida prevista desde Control de jornada</button>
+      <p class="muted small" id="plannedExitHint">Selecciona la fecha y, si ya registraste ese turno, podrás recuperar su última salida.</p>
+      <div class="two"><label>Salida prevista<input name="planned" type="time" required></label><label>Salida real<input name="actual" type="time" required></label></div>
+      <label>Motivo u observaciones<textarea name="notes" rows="2" placeholder="Ej.: prolongación del servicio, relevo tardío..."></textarea></label>
+      <button class="primary">Guardar ampliación</button>
+      <p class="muted small">El cálculo compara la salida real con la prevista. Si la salida real es después de medianoche, también se contempla.</p>
+    </form>
+    <form id="restForm" class="panel">
+      <h2>Calcular descanso entre jornadas</h2>
+      <div class="two"><label>Salida anterior<input name="out" type="datetime-local" required></label><label>Entrada siguiente<input name="in" type="datetime-local" required></label></div>
+      <button class="secondary">Calcular intervalo</button>
+      <p id="restResult" class="result" aria-live="polite"></p>
+      <p class="muted small">Es un cálculo horario informativo. No determina por sí solo si se cumple la normativa o el convenio aplicable.</p>
+    </form>
+    <div class="extension-history-head">
+      <h2>Historial de ampliaciones</h2>
+      <label>Consultar mes<input id="extensionMonth" type="month"></label>
+    </div>
+    <p class="muted small" id="extensionMonthCaption">Mostrando las ampliaciones del mes seleccionado.</p>
+    <div class="report-actions">
+      <button type="button" class="secondary" id="extensionReportShare">Compartir informe mensual</button>
+      <button type="button" class="secondary" id="extensionReportPrint">Imprimir / guardar PDF</button>
+    </div>
+    <div id="extensionList" class="records"></div>
+  </section>
+
+  <section id="incidencias" class="view">
+    <button class="back" data-home>← Inicio</button><h1>Informe de incidencias</h1>
+    <p class="muted">Modelo general para cualquier empresa, cliente o servicio de seguridad privada. Rellena únicamente los datos que conozcas.</p>
+    <div class="notice"><strong>Antes de generar el informe</strong><p>Describe los hechos de forma objetiva y cronológica. No incluyas suposiciones ni datos que no hayas podido comprobar. Este documento es un borrador de apoyo y no sustituye los procedimientos o canales oficiales de comunicación de tu empresa o servicio. Por privacidad, este formulario no guarda automáticamente su contenido: descarga o comparte el informe si necesitas conservarlo.</p></div>
+    <form id="incidentForm" class="panel report-form">
+      <h2>1. Datos del servicio y del vigilante</h2>
+      <div class="two"><label>Empresa de seguridad<input name="empresa" placeholder="Empresa para la que trabajas"></label><label>Cliente / titular del centro<input name="cliente" placeholder="Empresa o entidad donde prestas servicio"></label></div>
+      <label>Centro, instalación o servicio<input name="servicio" placeholder="Ej.: tienda, supermercado, estación, edificio..."></label>
+      <div class="two"><label>Dirección / ubicación<input name="ubicacion"></label><label>Zona concreta<input name="zona" placeholder="Acceso, planta, pasillo, andén..."></label></div>
+      <div class="two"><label>Nombre y apellidos del vigilante<input name="vigilante"></label><label>N.º TIP<input name="tip"></label></div>
+      <div class="two"><label>Fecha de la incidencia<input name="fecha" type="date"></label><label>Hora aproximada<input name="hora" type="time"></label></div>
+      <div class="two"><label>Turno<input name="turno" placeholder="Mañana, tarde, noche..."></label><label>Tipo de incidencia<select name="tipo"><option value="">Seleccionar</option><option>Alteración del orden</option><option>Hurto o robo</option><option>Agresión o amenaza</option><option>Acceso no autorizado</option><option>Daños materiales</option><option>Emergencia o asistencia</option><option>Incidencia operativa</option><option>Otra</option></select></label></div>
+      <h2>2. Personas relacionadas</h2>
+      <label>Personas implicadas / descripción identificativa no sensible<textarea name="implicados" rows="3" placeholder="Indica solo los datos necesarios y que conozcas. Si no consta, déjalo en blanco."></textarea></label>
+      <label>Testigos y datos de contacto, si procede<textarea name="testigos" rows="2"></textarea></label>
+      <h2>3. Relato de los hechos</h2>
+      <label>Descripción cronológica y objetiva<textarea name="hechos" rows="7" placeholder="Explica qué ocurrió, cuándo, dónde y cómo se tuvo conocimiento de los hechos."></textarea></label>
+      <h2>4. Actuación y comunicaciones</h2>
+      <label>Actuaciones realizadas por el personal de seguridad<textarea name="actuacion" rows="4" placeholder="Medidas adoptadas, intervención, comprobaciones, apoyo solicitado..."></textarea></label>
+      <div class="two"><label>¿Se avisó al responsable / centro de control?<select name="avisoResponsable"><option value="">Seleccionar</option><option>Sí</option><option>No</option><option>No consta</option></select></label><label>Hora del aviso<input name="horaAviso" type="time"></label></div>
+      <label>Otros avisos o servicios intervinientes<textarea name="avisos" rows="2" placeholder="Policía, emergencias, personal del cliente, asistencia sanitaria, etc."></textarea></label>
+      <label>Resultado / situación al finalizar la intervención<textarea name="resultado" rows="3"></textarea></label>
+      <label>Documentación o evidencias relacionadas<textarea name="evidencias" rows="2" placeholder="Cámaras, fotografías, número de incidencia, objetos, registros... Sin adjuntar datos innecesarios."></textarea></label>
+      <label>Observaciones adicionales<textarea name="observaciones" rows="3"></textarea></label>
+      <div class="two"><label>Localidad<input name="localidad"></label><label>Fecha de redacción<input name="fechaRedaccion" type="date"></label></div>
+      <label>Firma / identificación del redactor<input name="firma" placeholder="Nombre y apellidos; firma manuscrita si se imprime"></label>
+      <div class="two"><button class="primary" type="submit">Generar informe</button><button class="secondary clear-report" type="button">Limpiar formulario</button></div>
+    </form>
+    <div id="incidentOutput" class="panel output" hidden><h2>Informe preparado · Incidencias</h2><p class="muted">Revisa el contenido antes de copiarlo, descargarlo o imprimirlo.</p><pre></pre><div class="report-actions"><button type="button" class="secondary copy">Copiar texto</button><button type="button" class="secondary share">Compartir / WhatsApp</button><button type="button" class="secondary download">Descargar TXT</button><button type="button" class="secondary print">Imprimir / Guardar PDF</button><button type="button" class="secondary back-to-form">Volver al formulario</button></div></div>
+  </section>
+
+  <section id="accidentes" class="view">
+    <button class="back" data-home>← Inicio</button><h1>Informe de accidente</h1>
+    <p class="muted">Modelo general para comunicar un accidente ocurrido durante el trabajo o en el servicio, en cualquier empresa o instalación.</p>
+    <div class="notice"><strong>Importante</strong><p>Si existe una urgencia, solicita asistencia sanitaria y sigue el protocolo del servicio. Registra hechos observables y comunica el accidente por los canales establecidos por la empresa. Evita incluir diagnósticos o información médica que no sea necesaria. Por privacidad, este formulario no guarda automáticamente su contenido: descarga o comparte el informe si necesitas conservarlo.</p></div>
+    <form id="accidentForm" class="panel report-form">
+      <h2>1. Datos del trabajador y del servicio</h2>
+      <div class="two"><label>Nombre y apellidos<input name="nombre" required></label><label>N.º TIP<input name="tip"></label></div>
+      <div class="two"><label>Empresa de seguridad<input name="empresa"></label><label>Cliente / titular del centro<input name="cliente"></label></div>
+      <label>Centro, instalación o servicio<input name="servicio" placeholder="Tienda, supermercado, estación, edificio..."></label>
+      <div class="two"><label>Puesto / función<input name="puesto" placeholder="Vigilante de seguridad, etc."></label><label>Turno<input name="turno" placeholder="Mañana, tarde, noche..."></label></div>
+      <h2>2. Datos del accidente</h2>
+      <div class="two"><label>Fecha del accidente<input name="fecha" type="date" required></label><label>Hora aproximada<input name="hora" type="time"></label></div>
+      <div class="two"><label>Dirección / ubicación<input name="ubicacion"></label><label>Zona concreta<input name="zona" placeholder="Acceso, almacén, pasillo, andén..."></label></div>
+      <label>Tipo de accidente<select name="tipo"><option value="">Seleccionar</option><option>Caída al mismo nivel</option><option>Caída a distinto nivel</option><option>Golpe / impacto</option><option>Corte / pinchazo</option><option>Sobreesfuerzo</option><option>Agresión</option><option>Accidente de tráfico</option><option>Exposición a sustancia o agente</option><option>Otro</option></select></label>
+      <label>Descripción de cómo ocurrió<textarea name="descripcion" rows="6" placeholder="Relata los hechos en orden cronológico, indicando la tarea que realizabas y las circunstancias observadas."></textarea></label>
+      <h2>3. Daños y asistencia</h2>
+      <label>Lesiones o molestias manifestadas / daños observados<textarea name="lesiones" rows="3" placeholder="Describe únicamente lo manifestado por la persona o lo que hayas observado. No realices diagnósticos."></textarea></label>
+      <div class="two"><label>¿Se solicitó asistencia sanitaria?<select name="asistencia"><option value="">Seleccionar</option><option>Sí</option><option>No</option><option>No consta</option></select></label><label>Hora de solicitud<input name="horaAsistencia" type="time"></label></div>
+      <div class="two"><label>¿Hubo traslado a un centro sanitario?<select name="traslado"><option value="">Seleccionar</option><option>Sí</option><option>No</option><option>No consta</option></select></label><label>Centro sanitario, si se conoce<input name="centroSanitario"></label></div>
+      <label>Medidas adoptadas / asistencia recibida<textarea name="medidas" rows="3"></textarea></label>
+      <h2>4. Testigos y comunicación</h2>
+      <label>Testigos y datos de contacto, si procede<textarea name="testigos" rows="2"></textarea></label>
+      <div class="two"><label>¿Se comunicó a la empresa o responsable?<select name="comunicado"><option value="">Seleccionar</option><option>Sí</option><option>No</option><option>No consta</option></select></label><label>Fecha y hora de comunicación<input name="fechaComunicacion" type="datetime-local"></label></div>
+      <label>Persona / departamento al que se comunicó<input name="destinatario"></label>
+      <label>Observaciones adicionales<textarea name="observaciones" rows="3"></textarea></label>
+      <div class="two"><label>Localidad<input name="localidad"></label><label>Fecha de redacción<input name="fechaRedaccion" type="date"></label></div>
+      <label>Firma / identificación del redactor<input name="firma" placeholder="Nombre y apellidos; firma manuscrita si se imprime"></label>
+      <div class="two"><button class="primary" type="submit">Generar informe de accidente</button><button class="secondary clear-report" type="button">Limpiar formulario</button></div>
+    </form>
+    <div id="accidentOutput" class="panel output" hidden><h2>Informe preparado · Accidente</h2><p class="muted">Revisa el contenido antes de copiarlo, descargarlo o imprimirlo.</p><pre></pre><div class="report-actions"><button type="button" class="secondary copy">Copiar texto</button><button type="button" class="secondary share">Compartir / WhatsApp</button><button type="button" class="secondary download">Descargar TXT</button><button type="button" class="secondary print">Imprimir / Guardar PDF</button><button type="button" class="secondary back-to-form">Volver al formulario</button></div></div>
+  </section>
+
+  <section id="sindicato" class="view">
+    <button class="back" data-home>← Inicio</button><h1>STS-C</h1>
+    <div class="hero compact"><p class="eyebrow">SINDICATO DE TREBALLADORS DE SEGURETAT DE CATALUNYA</p><h2>Contacto del sindicato</h2><p>Datos de contacto publicados en la web oficial de STS-C.</p></div>
+    <div class="panel">
+      <h2>Sede sindical</h2>
+      <p><strong>Dirección</strong><br>Carrer de Trajà, 14-16, bajos<br>08004 Barcelona</p>
+      <p><strong>Teléfono</strong><br><a href="tel:+34934211622">93 421 16 22</a></p>
+      <p><strong>Correo electrónico</strong><br><a href="mailto:secretariageneral@sts-c.com">secretariageneral@sts-c.com</a></p>
+      <p><strong>Página web oficial</strong><br><a href="https://sts-c.com/" target="_blank" rel="noopener">www.sts-c.com</a></p>
+      <p><a class="button" href="https://sts-c.com/" target="_blank" rel="noopener">Visitar la web oficial de STS-C ↗</a></p>
+    </div>
+  </section>
+</main>
+<footer><strong>STS-C</strong><span>EL VIGILANTE DIGITAL · Versión 3.0 · Edición de revisión</span></footer>
+<script>
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const read=(k,d=[])=>{try{return JSON.parse(localStorage.getItem("vigilante_"+k))??d}catch{return d}};
+const write=(k,v)=>localStorage.setItem("vigilante_"+k,JSON.stringify(v));
+const today=new Date().toISOString().slice(0,10);
+function renderDocuments(){
+  const all=read("documents"),filter=$("#documentFilter").value;
+  const rows=all.map((x,i)=>({...x,_index:i})).filter(x=>!filter||x.category===filter).sort((a,b)=>(b.date||"").localeCompare(a.date||""));
+  $("#documentCount").textContent=all.length+" documento"+(all.length===1?"":"s");
+  $("#documentList").innerHTML=rows.map(x=>`<article class="record"><strong>${escapeHtml(x.title)}</strong><small>${escapeHtml(x.category)} · ${escapeHtml(x.date||"Sin fecha")}</small>${x.fileRef?`<p class="small">Archivo / ubicación: ${escapeHtml(x.fileRef)}</p>`:""}${x.notes?`<p class="small">${escapeHtml(x.notes)}</p>`:""}<button type="button" class="text-button delete-document" data-index="${x._index}">Eliminar referencia</button></article>`).join("")||'<p class="muted">Todavía no hay documentos en este índice.</p>';
+  $$(".delete-document").forEach(b=>b.addEventListener("click",()=>{if(!confirm("¿Eliminar esta referencia del índice? El archivo original no se borrará."))return;let d=read("documents");d.splice(Number(b.dataset.index),1);write("documents",d);renderDocuments()}));
+}
+$("#documentForm").elements.date.value=today;
+$("#documentForm").addEventListener("submit",e=>{
+  e.preventDefault();const x=Object.fromEntries(new FormData(e.target));
+  const d=read("documents");d.push(x);write("documents",d);e.target.reset();e.target.elements.date.value=today;renderDocuments();
+});
+$("#documentFilter").addEventListener("change",renderDocuments);
+$("#clearDocuments").addEventListener("click",()=>{if(!confirm("¿Borrar todas las referencias del índice? Los archivos originales no se borrarán."))return;write("documents",[]);renderDocuments()});
+$("#exportDocuments").addEventListener("click",()=>{
+  const rows=read("documents"),cols=["title","category","date","fileRef","notes"];
+  const csv=[cols.join(";"),...rows.map(x=>cols.map(k=>'"'+String(x[k]||"").replace(/"/g,'""')+'"').join(";"))].join("\\r\\n");
+  const blob=new Blob(["\\ufeff"+csv],{type:"text/csv;charset=utf-8"}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="mi-documentacion.csv";a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
+});
+renderDocuments();
+
+function show(id){$$(".view").forEach(v=>v.classList.toggle("active",v.id===id));window.scrollTo(0,0)}
+$$("[data-open]").forEach(b=>b.addEventListener("click",()=>show(b.dataset.open)));
+$$("[data-home]").forEach(b=>b.addEventListener("click",()=>show("home")));
+
+$$('input[type="date"]').forEach(x=>x.value=today);
+function hours(a,b){let [ah,am]=a.split(":").map(Number),[bh,bm]=b.split(":").map(Number);let n=(bh*60+bm)-(ah*60+am);if(n<0)n+=1440;return n}
+function fmt(min){return `${Math.floor(min/60)} h ${String(min%60).padStart(2,"0")} min`}
+function shiftMinutes(x){const seg=(a,b)=>{if(!a||!b)return 0;let [ah,am]=a.split(":").map(Number),[bh,bm]=b.split(":").map(Number),n=bh*60+bm-(ah*60+am);if(n<0)n+=1440;return n};return Math.max(0,seg(x.start,x.end)+seg(x.start2,x.end2)-Number(x.break||0))}
+function shiftMonth(){return $("#shiftMonth").value||new Date().toISOString().slice(0,7)}
+function renderShifts(){
+  let data=read("shifts"),month=shiftMonth(),rows=data.map((x,i)=>({...x,_index:i})).filter(x=>x.date?.startsWith(month)).sort((a,b)=>a.date.localeCompare(b.date)),
+  total=rows.reduce((sum,x)=>sum+Number(x.minutes??shiftMinutes(x)),0),target=Number($("#targetHours").value||162)*60;
+  $("#monthTotal").textContent=fmt(total);
+  $("#progress").style.width=Math.min(100,total/target*100)+"%";
+  $("#progressText").textContent=Math.round(total/target*100)+"% del objetivo mensual";
+  $("#shiftList").innerHTML=rows.slice().reverse().map(x=>{
+    let parts=[x.start+"–"+x.end];if(x.start2&&x.end2)parts.push(x.start2+"–"+x.end2);
+    return `<article class="record"><div class="record-top"><label class="small"><input type="checkbox" class="shift-select" value="${x._index}"> Seleccionar</label><button type="button" class="text-button delete-one-shift" data-index="${x._index}">Borrar</button></div><strong>${x.date} · ${fmt(Number(x.minutes??shiftMinutes(x)))}</strong><small>${parts.join(" + ")}${Number(x.break||0)?" · Pausa: "+x.break+" min":""}${x.notes?" · "+escapeHtml(x.notes):""}</small></article>`;
+  }).join("")||'<p class="muted">No hay turnos registrados para este mes.</p>';
+  document.querySelectorAll(".delete-one-shift").forEach(btn=>btn.addEventListener("click",()=>{
+    const idx=Number(btn.dataset.index);
+    if(!confirm("¿Quieres borrar solamente este turno?"))return;
+    const current=read("shifts");current.splice(idx,1);write("shifts",current);renderShifts();
+  }));
+}
+function shiftReportText(){let month=shiftMonth(),rows=read("shifts").filter(x=>x.date?.startsWith(month)).sort((a,b)=>a.date.localeCompare(b.date));let total=rows.reduce((sum,x)=>sum+Number(x.minutes??shiftMinutes(x)),0);let lines=rows.map(x=>x.date+": "+x.start+"-"+x.end+(x.start2&&x.end2?" y "+x.start2+"-"+x.end2:"")+" · "+fmt(Number(x.minutes??shiftMinutes(x)))+(x.break?" · pausa "+x.break+" min":"")+(x.notes?" · "+x.notes:""));return "CONTROL DE JORNADA · "+month+"\nTurnos registrados: "+rows.length+"\nTotal trabajado: "+fmt(total)+"\nObjetivo mensual: "+$("#targetHours").value+" horas\n\n"+lines.join("\n")}
+function downloadShiftCSV(){let rows=read("shifts").filter(x=>x.date?.startsWith(shiftMonth()));let csv=["Fecha;Entrada;Salida;Segunda entrada;Segunda salida;Pausa minutos;Total minutos;Observaciones",...rows.map(x=>[x.date,x.start,x.end,x.start2||"",x.end2||"",x.break||0,x.minutes??shiftMinutes(x),x.notes||""].map(v=>'"'+String(v).replaceAll('"','""')+'"').join(";"))].join("\n");let a=document.createElement("a");a.href=URL.createObjectURL(new Blob(["\ufeff"+csv],{type:"text/csv;charset=utf-8"}));a.download="control_jornada_"+shiftMonth()+".csv";a.click();URL.revokeObjectURL(a.href)}
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+$("#targetHours").value=read("target",162);$("#targetHours").addEventListener("change",e=>{write("target",Number(e.target.value));renderShifts()});
+$("#shiftMonth").value=new Date().toISOString().slice(0,7);$("#shiftMonth").addEventListener("change",renderShifts);
+$("#shiftForm").addEventListener("submit",e=>{e.preventDefault();let f=new FormData(e.target),x=Object.fromEntries(f);if(Boolean(x.start2)!==Boolean(x.end2)){alert("Completa la segunda entrada y salida, o deja las dos vacías.");return}x.minutes=shiftMinutes(x);if(x.minutes<=0){alert("Comprueba los horarios introducidos.");return}let d=read("shifts");d.push(x);write("shifts",d);e.target.reset();e.target.elements.date.value=today;e.target.elements.break.value=0;renderShifts()});
+$("#shareShifts").addEventListener("click",async()=>{let text=shiftReportText();if(navigator.share){try{await navigator.share({title:"Control de jornada",text})}catch(e){}}else{try{await navigator.clipboard.writeText(text);alert("Informe copiado. Ya puedes pegarlo en WhatsApp.")}catch(e){location.href="https://wa.me/?text="+encodeURIComponent(text)}}});
+$("#downloadShifts").addEventListener("click",downloadShiftCSV);
+$("#deleteSelectedShifts").addEventListener("click",()=>{
+  const selected=[...document.querySelectorAll(".shift-select:checked")].map(el=>Number(el.value)).sort((a,b)=>b-a);
+  if(!selected.length){alert("Marca primero los turnos que quieres borrar.");return;}
+  if(!confirm("¿Borrar los "+selected.length+" turnos seleccionados?"))return;
+  const current=read("shifts");selected.forEach(i=>current.splice(i,1));write("shifts",current);renderShifts();
+});
+$("#clearShifts").addEventListener("click",()=>{if(confirm("¿Borrar TODOS los turnos guardados en este dispositivo, de todos los meses? Esta acción no se puede deshacer.")){write("shifts",[]);renderShifts()}});
+
+let rosterView = new Date(); rosterView.setDate(1);
+let selectedRosterDate = null;
+const rosterForm=$("#rosterForm");
+const monthNames=["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"];
+const dateKey=d=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;
+function rosterMinutes(x){
+  const segment=(start,end)=>{
+    if(!start||!end)return 0;
+    const a=start.split(":").map(Number),b=end.split(":").map(Number);
+    let n=(b[0]*60+b[1])-(a[0]*60+a[1]);if(n<0)n+=1440;
+    return Math.max(0,n);
+  };
+  return Math.max(0,segment(x.start,x.end)+segment(x.start2,x.end2)-Number(x.break||0));
+}
+function rosterScheduleText(x){
+  const parts=[];
+  if(x.start&&x.end)parts.push(x.start+"-"+x.end);
+  if(x.start2&&x.end2)parts.push(x.start2+"-"+x.end2);
+  return parts.join(" y ");
+}
+function renderRoster(){
+  const year=rosterView.getFullYear(),month=rosterView.getMonth(),first=new Date(year,month,1),days=new Date(year,month+1,0).getDate();
+  $("#calendarMonth").textContent=monthNames[month]+" "+year;
+  const data=read("roster"),map={};data.forEach(x=>map[x.date]=x);
+  const offset=(first.getDay()+6)%7,grid=$("#calendarGrid");
+  const labels=["L","M","X","J","V","S","D"];
+  grid.innerHTML=labels.map(x=>`<div class="calendar-weekday">${x}</div>`).join("");
+  for(let i=0;i<offset;i++)grid.insertAdjacentHTML("beforeend",'<div class="calendar-day empty"></div>');
+  let total=0,worked=0;
+  for(let day=1;day<=days;day++){
+    const d=new Date(year,month,day),key=dateKey(d),x=map[key],mins=x?rosterMinutes(x):0;
+    if(x){total+=mins;if(mins>0)worked++;}
+    let tag=x?escapeHtml(x.type):"",cls="calendar-day";
+    if(x&&mins>0)cls+=" worked";
+    if(x&&x.type==="Mañana")cls+=" shift-morning";
+    if(x&&x.type==="Tarde")cls+=" shift-afternoon";
+    if(x&&x.type==="Noche")cls+=" shift-night";
+    if(x&&["Trabajo","Partido","Otro"].includes(x.type))cls+=" shift-work";
+    if(x&&x.type==="Libre")cls+=" off";
+    if(x&&["Vacaciones","Baja","Permiso"].includes(x.type))cls+=" leave";
+    if(key===dateKey(new Date()))cls+=" today";
+    if(key===selectedRosterDate)cls+=" selected";
+    grid.insertAdjacentHTML("beforeend",`<button type="button" class="${cls}" data-day="${key}"><span class="num">${day}</span><span class="tag">${tag||"＋"}</span></button>`);
+  }
+  $("#rosterHours").textContent=`${Math.floor(total/60)} h ${String(total%60).padStart(2,"0")}`;
+  $("#rosterDays").textContent=worked;
+  const target=Number(read("target",162))||162;
+  $("#rosterTarget").textContent=target+" h";
+  $("#monthlyTarget").value=target;
+  const remaining=target-total/60;
+  $("#hoursRemaining").textContent=remaining>0
+    ? `Te quedan ${Math.floor(remaining)} h ${String(Math.round((remaining%1)*60)).padStart(2,"0")} min para completar el objetivo`
+    : remaining<0
+      ? `Has superado el objetivo por ${Math.floor(Math.abs(remaining))} h ${String(Math.round((Math.abs(remaining)%1)*60)).padStart(2,"0")} min`
+      : "¡Objetivo mensual completado!";
+  grid.querySelectorAll("[data-day]").forEach(b=>b.addEventListener("click",()=>openRosterDay(b.dataset.day,map[b.dataset.day])));
+}
+function openRosterDay(date,x){
+  selectedRosterDate=date;renderRoster();
+  $("#dayEditor").hidden=false;
+  $("#editorTitle").textContent="Día "+date.split("-").reverse().join("/");
+  rosterForm.reset();rosterForm.elements.date.value=date;
+  rosterForm.elements.break.value=0;
+  if(x){Object.entries(x).forEach(([k,v])=>{if(rosterForm.elements[k])rosterForm.elements[k].value=v;});}
+  $("#dayEditor").scrollIntoView({behavior:"smooth",block:"start"});
+}
+rosterForm.addEventListener("submit",e=>{
+  e.preventDefault();const x=Object.fromEntries(new FormData(rosterForm));const d=read("roster");
+  const i=d.findIndex(y=>y.date===x.date);if(i>=0)d[i]=x;else d.push(x);
+  write("roster",d);$("#dayEditor").hidden=true;renderRoster();
+});
+$("#deleteDay").addEventListener("click",()=>{
+  if(!selectedRosterDate)return;
+  write("roster",read("roster").filter(x=>x.date!==selectedRosterDate));
+  $("#dayEditor").hidden=true;renderRoster();
+});
+$("#closeEditor").addEventListener("click",()=>{$("#dayEditor").hidden=true;});
+$("#prevMonth").addEventListener("click",()=>{rosterView.setMonth(rosterView.getMonth()-1);selectedRosterDate=null;$("#dayEditor").hidden=true;renderRoster();});
+$("#nextMonth").addEventListener("click",()=>{rosterView.setMonth(rosterView.getMonth()+1);selectedRosterDate=null;$("#dayEditor").hidden=true;renderRoster();});
+
+$("#saveTarget").addEventListener("click",()=>{
+  const value=Number($("#monthlyTarget").value);
+  if(!Number.isFinite(value)||value<1||value>300){alert("Introduce un objetivo entre 1 y 300 horas.");return;}
+  write("target",value);
+  renderRoster();
+  alert("Objetivo mensual guardado.");
+});
+function rosterMonthData(){
+  const prefix=`${rosterView.getFullYear()}-${String(rosterView.getMonth()+1).padStart(2,"0")}`;
+  return read("roster").filter(x=>x.date.startsWith(prefix)).sort((a,b)=>a.date.localeCompare(b.date));
+}
+$("#exportRoster").addEventListener("click",()=>{
+  const rows=[["Fecha","Tipo","Entrada 1","Salida 1","Entrada 2","Salida 2","Pausa minutos","Horas","Observaciones"],...rosterMonthData().map(x=>[x.date,x.type,x.start||"",x.end||"",x.start2||"",x.end2||"",x.break||0,(rosterMinutes(x)/60).toFixed(2),x.notes||""])];
+  const csv=rows.map(r=>r.map(v=>'"'+String(v).replace(/"/g,'""')+'"').join(";")).join("\n");
+  const blob=new Blob(["\ufeff"+csv],{type:"text/csv;charset=utf-8"}),url=URL.createObjectURL(blob),a=document.createElement("a");
+  a.href=url;a.download=`cuadrante-${rosterView.getFullYear()}-${String(rosterView.getMonth()+1).padStart(2,"0")}.csv`;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
+});
+$("#shareRoster").addEventListener("click",async()=>{
+  const rows=rosterMonthData(),title=`Cuadrante ${monthNames[rosterView.getMonth()]} ${rosterView.getFullYear()}`;
+  const body=rows.length?rows.map(x=>`${x.date}: ${x.type}${rosterScheduleText(x)?" "+rosterScheduleText(x):""}${x.notes?" · "+x.notes:""}`).join("\n"):"Sin días anotados.";
+  const textShare=title+"\n"+body;
+  if(navigator.share){try{await navigator.share({title,text:textShare});}catch(e){}}
+  else{const url="https://wa.me/?text="+encodeURIComponent(textShare);window.open(url,"_blank");}
+});
+$("#printRoster").addEventListener("click",()=>{document.body.classList.add("printing-roster");window.print();setTimeout(()=>document.body.classList.remove("printing-roster"),700);});
+function extensionMinutes(x){
+  if(!x.planned||!x.actual)return 0;
+  const [ph,pm]=x.planned.split(":").map(Number),[ah,am]=x.actual.split(":").map(Number);
+  let planned=ph*60+pm,actual=ah*60+am;
+  if(actual<planned)actual+=1440;
+  return Math.max(0,actual-planned);
+}
+function renderExtensions(){
+  const all=read("extensions");
+  const month=$("#extensionMonth").value || today.slice(0,7);
+  const d=all.filter(x=>(x.date||"").slice(0,7)===month);
+  const total=d.reduce((sum,x)=>sum+extensionMinutes(x),0),count=d.length;
+  $("#extensionTotal").textContent=fmt(total);
+  $("#extensionCount").textContent=count;
+  $("#extensionAverage").textContent=count?Math.round(total/count)+" min":"0 min";
+  $("#extensionMonthCaption").textContent=`Mostrando ${count} ampliación${count===1?"":"es"} de ${month}. El historial de otros meses se conserva.`;
+  $("#extensionList").innerHTML=d.slice().reverse().map(x=>{
+    const mins=extensionMinutes(x);
+    return `<article class="record extension-record"><strong>${escapeHtml(x.date)} · Prevista ${escapeHtml(x.planned)} / real ${escapeHtml(x.actual)}</strong><span class="extra">Tiempo adicional: ${fmt(mins)}</span><small>${x.notes?escapeHtml(x.notes):"Sin observaciones"}</small></article>`;
+  }).join("")||'<p class="muted">No hay ampliaciones registradas en este mes.</p>';
+}
+$("#extensionMonth").value=today.slice(0,7);
+$("#extensionMonth").addEventListener("change",renderExtensions);
+
+// Recupera la salida planificada desde Control de jornada para evitar duplicar datos.
+$("#loadPlannedExit").addEventListener("click",()=>{
+  const date=$("#extensionForm").elements.date.value;
+  if(!date){alert("Selecciona primero la fecha del turno.");return;}
+  const shifts=read("shifts").filter(x=>x.date===date);
+  if(!shifts.length){
+    $("#plannedExitHint").textContent="No hay ningún turno de esa fecha en Control de jornada. Puedes introducir la salida prevista manualmente.";
+    return;
+  }
+  const shift=shifts[shifts.length-1];
+  const planned=shift.end2||shift.end;
+  if(!planned){
+    $("#plannedExitHint").textContent="El turno encontrado no tiene una hora de salida. Introduce la salida prevista manualmente.";
+    return;
+  }
+  $("#extensionForm").elements.planned.value=planned;
+  $("#plannedExitHint").textContent="Salida prevista cargada desde Control de jornada: "+planned+". Comprueba que corresponde al turno que quieres ampliar.";
+});
+$("#extensionForm").elements.date.addEventListener("change",()=>{
+  $("#extensionForm").elements.planned.value="";
+  $("#plannedExitHint").textContent="Fecha modificada. Pulsa «Cargar salida prevista» para recuperar el horario de ese día, o introdúcelo manualmente.";
+});
+
+function extensionReportText(){
+  const month=$("#extensionMonth").value||today.slice(0,7);
+  const all=read("extensions").filter(x=>(x.date||"").slice(0,7)===month);
+  const total=all.reduce((sum,x)=>sum+extensionMinutes(x),0);
+  const lines=[`EL VIGILANTE DIGITAL – STS-C`,`INFORME DE AMPLIACIONES · ${month}`,`Número de ampliaciones: ${all.length}`,`Tiempo adicional acumulado: ${fmt(total)}`,``];
+  if(!all.length) lines.push("No hay ampliaciones registradas en este mes.");
+  all.slice().sort((a,b)=>(a.date||"").localeCompare(b.date||"")).forEach(x=>{
+    lines.push(`${x.date} | Prevista: ${x.planned} | Real: ${x.actual} | Adicional: ${fmt(extensionMinutes(x))}`);
+    if(x.notes) lines.push(`Observaciones: ${x.notes}`);
+  });
+  lines.push("", "Documento de control personal. Los datos reflejan los registros introducidos por el usuario.");
+  return lines.join("\n");
+}
+$("#extensionReportShare").addEventListener("click",async()=>{
+  const text=extensionReportText();
+  if(navigator.share){
+    try{await navigator.share({title:"Informe mensual de ampliaciones",text});}
+    catch(err){if(err.name!=="AbortError")alert("No se pudo abrir el menú para compartir. Puedes copiar el informe desde la opción de impresión.");}
+  }else{
+    try{await navigator.clipboard.writeText(text);alert("Informe copiado. Ya puedes pegarlo en WhatsApp.");}
+    catch(err){prompt("Copia el informe y pégalo en WhatsApp:",text);}
+  }
+});
+$("#extensionReportPrint").addEventListener("click",()=>{
+  const text=extensionReportText();
+  const w=window.open("","_blank");
+  if(!w){alert("El navegador ha bloqueado la ventana. Permite las ventanas emergentes para imprimir el informe.");return;}
+  const safe=text.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+  w.document.write(`<!doctype html><html lang="es"><head><meta charset="utf-8"><title>Informe mensual de ampliaciones</title><style>body{font:16px Arial,sans-serif;color:#172b3b;padding:28px;line-height:1.5}pre{white-space:pre-wrap;font:15px Arial,sans-serif}h1{font-size:21px;color:#15395b}</style></head><body><h1>EL VIGILANTE DIGITAL – STS-C</h1><pre>${safe}</pre><script>window.onload=()=>window.print()<\\/script></body></html>`);
+  w.document.close();
+});
+$("#extensionForm").addEventListener("submit",e=>{
+  e.preventDefault();let x=Object.fromEntries(new FormData(e.target));
+  x.minutes=extensionMinutes(x);
+  let d=read("extensions");d.push(x);write("extensions",d);
+  e.target.reset();e.target.elements.date.value=today;renderExtensions();
+});
+$("#restForm").addEventListener("submit",e=>{
+  e.preventDefault();let f=new FormData(e.target),a=new Date(f.get("out")),b=new Date(f.get("in")),diff=b-a;
+  if(!Number.isFinite(diff)||diff<0){$("#restResult").textContent="Comprueba las fechas y horas introducidas.";return}
+  let mins=Math.floor(diff/60000);
+  $("#restResult").textContent="Tiempo entre jornadas: "+fmt(mins)+". Cálculo informativo; no determina por sí solo el cumplimiento legal.";
+});
+function buildReport(form, title, upperNames=[]){
+  const lines=[title,"DOCUMENTO DE TRABAJO · Revisar antes de comunicar",""];
+  const addLabel=label=>{
+    const el=label.querySelector("input:not([type=checkbox]):not([type=radio]),select,textarea");
+    if(!el || !el.name) return;
+    let value=String(el.value||"").trim();
+    if(!value) return;
+    if(upperNames.includes(el.name)) value=value.toLocaleUpperCase("es-ES");
+    const caption=label.childNodes[0]?.textContent?.trim() || el.name;
+    lines.push(caption+": "+value);
+  };
+  for(const child of form.children){
+    if(child.tagName==="H2"){
+      if(lines.length>3) lines.push("");
+      const heading=child.textContent.trim();
+      lines.push(heading.toLocaleUpperCase("es-ES"));
+      lines.push("—".repeat(Math.min(48,Math.max(12,heading.length))));
+    }else if(child.tagName==="LABEL"){
+      addLabel(child);
+    }else if(child.classList?.contains("two")){
+      child.querySelectorAll(":scope > label").forEach(addLabel);
+    }
+  }
+  lines.push("", "FIRMA DEL REDACTOR", "—".repeat(18), "Nombre y apellidos: "+(form.elements.namedItem("firma")?.value?.trim()||"________________________________"), "Firma: ______________________________________________", "Fecha: ____________________");
+  return lines.join("\n");
+}
+function setupReport(formId,outId,title,upperNames=[]){
+  const form=$(formId),out=$(outId),pre=out.querySelector('pre');
+  form.addEventListener('submit',e=>{e.preventDefault();pre.textContent=buildReport(form,title,upperNames);out.hidden=false;out.scrollIntoView({behavior:'smooth',block:'start'});});
+  form.querySelector('.clear-report').addEventListener('click',()=>{
+    if(!confirm('¿Quieres borrar todos los campos de este formulario? Esta acción no se puede deshacer.')) return;
+    form.reset();
+    form.querySelectorAll('input[type="date"]').forEach(x=>x.value=today);
+    out.hidden=true;
+    pre.textContent='';
+    form.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+  out.querySelector('.back-to-form').addEventListener('click',()=>form.scrollIntoView({behavior:'smooth',block:'start'}));
+
+  out.querySelector('.copy').addEventListener('click',async e=>{
+    const text=pre.textContent;
+    try{await navigator.clipboard.writeText(text);e.currentTarget.textContent='Copiado';}
+    catch{const area=document.createElement('textarea');area.value=text;document.body.appendChild(area);area.select();try{document.execCommand('copy');e.currentTarget.textContent='Copiado';}catch{e.currentTarget.textContent='Selecciona el texto para copiar';}area.remove();}
+  });
+  out.querySelector('.share').addEventListener('click',async()=>{
+    const text=pre.textContent;
+    if(navigator.share){
+      try{await navigator.share({title:title,text});}
+      catch(err){if(err.name!=="AbortError")alert("No se pudo abrir el menú para compartir. Puedes copiar el informe y pegarlo en WhatsApp.");}
+    }else{
+      const url="https://wa.me/?text="+encodeURIComponent(text);
+      window.open(url,"_blank");
+    }
+  });
+  out.querySelector('.download').addEventListener('click',()=>{
+    const blob=new Blob([pre.textContent],{type:'text/plain;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');
+    a.href=url;a.download=title.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')+'.txt';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
+  });
+  out.querySelector('.print').addEventListener('click',()=>{document.body.classList.add('printing-report');window.print();setTimeout(()=>document.body.classList.remove('printing-report'),500);});
+}
+setupReport('#incidentForm','#incidentOutput','INFORME GENERAL DE INCIDENCIAS — BORRADOR');
+setupReport('#accidentForm','#accidentOutput','INFORME GENERAL DE ACCIDENTE — BORRADOR');
+renderShifts();renderRoster();renderExtensions();
+let deferredPrompt;const install=$("#installBtn");window.addEventListener("beforeinstallprompt",e=>{e.preventDefault();deferredPrompt=e;install.hidden=false});install.addEventListener("click",async()=>{if(!deferredPrompt)return;deferredPrompt.prompt();await deferredPrompt.userChoice;deferredPrompt=null;install.hidden=true});
+if("serviceWorker" in navigator && location.protocol.startsWith("http"))navigator.serviceWorker.register("./sw.js").catch(()=>{});
+
+</script>
+</body>
+</html>
